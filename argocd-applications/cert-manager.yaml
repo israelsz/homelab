@@ -13,11 +13,11 @@ spec:
       targetRevision: v1.17.2
       helm:
         valueFiles:
-          - $values/values.yaml
+          - $values/cert-manager/values.yaml
 
     - repoURL: https://github.com/israelsz/homelab.git
       targetRevision: main
-      path: app-config/cert-manager   
+      path: app-config  
       ref: values
 
   destination:
