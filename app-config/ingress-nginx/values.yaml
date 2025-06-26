@@ -1,9 +1,11 @@
 controller:
   service:
     type: NodePort
+    externalTrafficPolicy: Local  
     nodePorts:
-      http: 32579
+      http:  32579
       https: 31258
+
   admissionWebhooks:
     enabled: true
     patch:
