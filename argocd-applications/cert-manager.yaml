@@ -17,6 +17,7 @@ spec:
 
     - repoURL: https://github.com/israelsz/homelab.git
       targetRevision: main
+      ref: values
       path: app-config/cert-manager
 
   destination:
