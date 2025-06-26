@@ -1,4 +1,4 @@
-# argocd-applications/cert-manager.yaml
+---
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -6,6 +6,15 @@ metadata:
   namespace: argocd
 spec:
   project: default
+  ignoreDifferences:
+    - group: cert-manager.io
+      kind: Certificate
+      namespace: argocd
+      name: argocd-tls
+      jsonPointers:
+        - /status
+        - /metadata/ownerReferences
+        - /metadata/annotations
 
   sources:
     - chart: cert-manager
