@@ -11,7 +11,7 @@ spec:
     targetRevision: 4.12.3
     helm:
       valueFiles:
-        - ../app-config/ingress-nginx/values.yaml
+        - app-config/ingress-nginx/values.yaml
   destination:
     server: https://kubernetes.default.svc
     namespace: ingress-nginx
