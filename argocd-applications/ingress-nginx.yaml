@@ -13,9 +13,10 @@ spec:
       helm:
         valueFiles:
           - $values/app-config/ingress-nginx/values.yaml
-          
+
     - repoURL: https://github.com/israelsz/homelab.git
       targetRevision: main
+      ref: values
 
   destination:
     server: https://kubernetes.default.svc
