@@ -18,6 +18,7 @@ spec:
     - repoURL: https://github.com/israelsz/homelab.git
       targetRevision: main
       path: app-config/cert-manager   
+      ref: values
 
   destination:
     server: https://kubernetes.default.svc
