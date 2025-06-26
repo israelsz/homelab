@@ -1,7 +1,6 @@
 controller:
   service:
     type: NodePort
-    externalTrafficPolicy: Local  
     nodePorts:
       http:  32579
       https: 31258
