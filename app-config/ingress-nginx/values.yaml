@@ -1,0 +1,7 @@
+controller:
+  publishService:
+    enabled: true
+  admissionWebhooks:
+    enabled: true
+    patch:
+      enabled: true
