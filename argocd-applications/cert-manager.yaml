@@ -1,3 +1,4 @@
+# argocd-applications/cert-manager.yaml
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -12,11 +13,11 @@ spec:
       targetRevision: v1.17.2
       helm:
         valueFiles:
-          - $values/app-config/cert-manager/values.yaml
+          - $values/cert-manager/values.yaml
 
     - repoURL: https://github.com/israelsz/homelab.git
       targetRevision: main
-      ref: values
+      path: app-config/cert-manager   
 
   destination:
     server: https://kubernetes.default.svc
