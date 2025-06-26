@@ -8,5 +8,6 @@ resources:
   - ns.yaml
   # Install ArgoCD
   - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-  
+
   - ingress.yaml      
+  - certificate.yaml
