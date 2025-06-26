@@ -17,7 +17,6 @@ spec:
 
     - repoURL: https://github.com/israelsz/homelab.git
       targetRevision: main
-      path: app-config  
       ref: values
 
   destination:
