@@ -4,6 +4,7 @@ metadata:
   name: argocd-tls
   namespace: argocd
 spec:
+  suspend: true
   secretName: argocd-tls       
   issuerRef:
     name: letsencrypt-prod     
