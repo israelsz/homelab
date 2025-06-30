@@ -19,18 +19,3 @@ spec:
     automated: {}
     syncOptions:
       - CreateNamespace=true
-      
-  ignoreDifferences:                 
-    - group: cert-manager.io
-      kind: CertificateRequest
-      jsonPointers:
-        - /spec
-        - /status
-    - group: cert-manager.io
-      kind: Order
-      jsonPointers:
-        - /status
-    - group: cert-manager.io
-      kind: Challenge
-      jsonPointers:
-        - /status
