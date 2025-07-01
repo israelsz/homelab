@@ -1,0 +1,27 @@
+apiVersion: postgresql.cnpg.io/v1
+kind: Cluster
+metadata:
+  name: keycloak-postgres
+  namespace: keycloak
+spec:
+  instances: 1
+  
+  postgresql:
+    parameters:
+      max_connections: "200"
+      shared_buffers: "256MB"
+      effective_cache_size: "1GB"
+  
+  bootstrap:
+    initdb:
+      database: keycloak
+      owner: keycloak
+      secret:
+        name: keycloak-postgres-credentials
+  
+  storage:
+    size: 10Gi
+    storageClass: "local-path"  # Adjust this to your storage class
+  
+  monitoring:
+    enabled: true

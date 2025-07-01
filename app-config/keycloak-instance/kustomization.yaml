@@ -4,4 +4,9 @@ kind: Kustomization
 namespace: keycloak
 
 resources:
-  - keycloak-cr.yaml
+  - postgres-secret.yaml
+  - postgres-cluster.yaml
+  - keycloak-db-secret.yaml
+  - keycloak.yaml
+  - certificate.yaml
+  - ingress.yaml
