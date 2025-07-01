@@ -21,4 +21,4 @@ spec:
   
   storage:
     size: 3Gi
-    storageClass: "standard"  # Adjust this to your storage class
+    storageClass: standard
