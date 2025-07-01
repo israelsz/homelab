@@ -6,8 +6,8 @@ namespace: argocd
 resources:
   - ../../infra/argocd-bootstrap
   - ingress.yaml
+  - sealedsecret-argocd-secret.yaml
 
 patches:
   - path: argocd-keycloak-cm-patch.yaml
   - path: argocd-keycloack-rbac-cm-patch.yaml
-  - path: sealedsecret-argocd-secret.yaml
