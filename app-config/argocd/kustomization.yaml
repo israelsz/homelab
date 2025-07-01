@@ -10,3 +10,6 @@ resources:
   - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 
   - ingress.yaml
+  - argocd-rbac-keycloack-cm.yaml
+  - keycloack-argocd-cm.yaml
+  - sealedsecret-argocd-secret.yaml
