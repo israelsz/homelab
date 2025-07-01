@@ -1,23 +1,20 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: keycloak
+  name: keycloak-instance
   namespace: argocd
 spec:
   project: default
-
   source:
     repoURL: https://github.com/israelsz/homelab.git
     targetRevision: HEAD
-    path: app-config/keycloak
-
+    path: app-config/keycloak-instance
   destination:
     server: https://kubernetes.default.svc
     namespace: keycloak
-
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-      syncOptions:
+    syncOptions:
       - CreateNamespace=true
