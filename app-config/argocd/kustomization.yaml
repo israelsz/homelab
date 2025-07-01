@@ -8,8 +8,9 @@ resources:
   - ns.yaml
   # Install ArgoCD
   - https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
-
   - ingress.yaml
-  - argocd-rbac-keycloack-cm.yaml
-  - keycloack-argocd-cm.yaml
+
+patchesStrategicMerge:
+  - argocd-keycloak-cm-patch.yaml
+  - argocd-keycloack-rbac-cm-patch.yaml
   - sealedsecret-argocd-secret.yaml
