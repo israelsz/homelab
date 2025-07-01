@@ -4,6 +4,7 @@ kind: Kustomization
 namespace: argocd
 
 resources:
+  - ../../infra/argocd-bootstrap
   - ingress.yaml
 
 patches:
