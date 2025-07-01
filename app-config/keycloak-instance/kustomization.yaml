@@ -8,5 +8,4 @@ resources:
   - postgres-cluster.yaml
   - keycloak-db-sealed-secret.yaml
   - keycloak.yaml
-  - certificate.yaml
   - ingress.yaml
