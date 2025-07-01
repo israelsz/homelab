@@ -8,10 +8,21 @@ resources:
 
 # CRDs del Operator
   - https://raw.githubusercontent.com/keycloak/keycloak-k8s-resources/26.2.5/kubernetes/keycloaks.k8s.keycloak.org-v1.yml
+    metadata:
+      annotations:
+        argocd.argoproj.io/sync-wave: "0"
   - https://raw.githubusercontent.com/keycloak/keycloak-k8s-resources/26.2.5/kubernetes/keycloakrealmimports.k8s.keycloak.org-v1.yml
+    metadata:
+      annotations:
+        argocd.argoproj.io/sync-wave: "0"
 
 # Despliegue RBAC / ServiceAccount / Deployment del Operator
   - https://raw.githubusercontent.com/keycloak/keycloak-k8s-resources/26.2.5/kubernetes/kubernetes.yml
+    metadata:
+      annotations:
+        argocd.argoproj.io/sync-wave: "0"
 
- 
   - keycloak-cr.yaml
+    metadata:
+      annotations:
+        argocd.argoproj.io/sync-wave: "1"
