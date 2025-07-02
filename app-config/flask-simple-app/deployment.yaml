@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: flask
-        image: registry.gitlab.com/israelsz/appexample:415df70e04f1778700fb107f841b7330bbd4cd0a
+        image: registry.gitlab.com/israelsz/appexample:ad15381b1e4276fba9b4f39ac9c817b58c64553e
         ports:
         - containerPort: 5000
         readinessProbe:
