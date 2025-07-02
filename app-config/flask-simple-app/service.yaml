@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: flask-simple-app
+  namespace: flask-simple-app
+spec:
+  type: ClusterIP
+  selector:
+    app: flask-simple-app
+  ports:
+    - name: http
+      port: 80        
+      targetPort: 5000  
