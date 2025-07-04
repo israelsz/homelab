@@ -6,3 +6,4 @@ metadata:
 data:
   policy.csv: |
     g, ArgoCDAdmins, role:admin
+    g, ArgoCDReadOnly, role:readonly
